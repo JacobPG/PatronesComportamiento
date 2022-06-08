@@ -14,7 +14,7 @@ public class InventarioLibros extends Publisher {
     private List<LibroInventario> listalibros;
 
     public void devolverlibro(Libro libro) {
-        transaccionLibro(libro, TipoTransaccion.PRESTAMO);
+        transaccionLibro(libro, TipoTransaccion.DEVOLUCION);
     }
 
     public void prestarlibro(Libro libro) {
@@ -39,8 +39,9 @@ public class InventarioLibros extends Publisher {
             {cantidad++;}
             else {cantidad--;}
             inventario.setCantidad(cantidad);
-            this.notifySybscribers(listalibros);
+            
         }
+        this.notifySybscribers(listalibros);
     }
 
     public void agregarLibro(Libro libro, int cantidad){

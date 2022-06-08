@@ -26,18 +26,19 @@ public class Main {
         inventario.actualizarInventario();
 
 
+        System.out.println("**********************************");
         instacia1.buscarLibro("titulo2");
         instacia2.buscarLibro("titulo3");
         instacia3.buscarLibro("titulo1");
         instacia4.buscarLibro("titulo4");
 
-        System.out.println("**********************************");
+        System.out.println("**************DEVOLUCION 1********************");
         inventario.devolverlibro(libro1);
-        System.out.println("**********************************");
+        System.out.println("**************DEVOLUCION 2********************");
         inventario.devolverlibro(libro2);
-        System.out.println("**********************************");
+        System.out.println("**************PRESTAMO 1********************");
         inventario.prestarlibro(libro4);
-        System.out.println("**********************************");
+        System.out.println("**************PRESTAMO 2********************");
         inventario.prestarlibro(libro4);
         }
 
