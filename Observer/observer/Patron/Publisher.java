@@ -15,7 +15,7 @@ public class Publisher {
     }
 
     public void unsubscriber(Subscriber sub) {
-        subscribers.add(sub);
+        subscribers.remove(sub);
     }
 
     public void notifySybscribers(Object state) {
