@@ -1,7 +1,8 @@
+package observer;
 
 import java.util.*;
 
-import Patron.Publisher;
+import observer.Patron.Publisher;
 
 public class InventarioLibros extends Publisher {
 
@@ -38,7 +39,7 @@ public class InventarioLibros extends Publisher {
             {cantidad++;}
             else {cantidad--;}
             inventario.setCantidad(cantidad);
-            this.notifySybscribers();
+            this.notifySybscribers(listalibros);
         }
     }
 
@@ -47,15 +48,9 @@ public class InventarioLibros extends Publisher {
         listalibros.add(nuevolibro);
     }
 
-    public LibroInventario buscaLibro(String titulo){
-        LibroInventario resultado = null;
-        for (LibroInventario libroInventario : listalibros) {
-            if(libroInventario.getLibro().getTitulo().equals(titulo))
-            {
-                resultado =libroInventario;
-                break;
-            }
-        }
-        return resultado;
+    public void actualizarInventario()
+    {
+        this.notifySybscribers(listalibros);
     }
+
 }

@@ -1,4 +1,4 @@
-package Patron;
+package observer.Patron;
 
 import java.util.*;
 
@@ -18,9 +18,9 @@ public class Publisher {
         subscribers.add(sub);
     }
 
-    public void notifySybscribers() {
+    public void notifySybscribers(Object state) {
         for (Subscriber subscriber : subscribers) {
-            subscriber.update();;
+            subscriber.update(state);;
         }
     }
 

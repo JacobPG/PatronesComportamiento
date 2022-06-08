@@ -1,3 +1,4 @@
+package observer;
 public class LibroInventario {
     
     private Libro libro;
